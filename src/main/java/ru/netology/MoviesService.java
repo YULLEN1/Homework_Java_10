@@ -2,7 +2,7 @@ package ru.netology;
 
 public class MoviesService {
     private String[] movies = new String[0];
-    private int limit;
+    private final int limit;
 
     public MoviesService() {
         this.limit = 5;
@@ -15,9 +15,7 @@ public class MoviesService {
     public void add(String newMovie) {
 
         String[] tmp = new String[movies.length + 1];
-        for (int i = 0; i < movies.length; i++) {
-            tmp[i] = movies[i];
-        }
+        System.arraycopy(movies, 0, tmp, 0, movies.length);
         tmp[tmp.length - 1] = newMovie;
         movies = tmp;
     }
@@ -35,7 +33,7 @@ public class MoviesService {
         }
         String[] result = new String[resultLength];
         for (int i = 0; i < resultLength; i++) {
-            result[i] = result[movies.length - 1 - i];
+            result[i] = movies[movies.length - 1 - i];
 
         }
         return result;

@@ -3,6 +3,7 @@ package ru.netology;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 public class MoviesServiceTest {
 
     @Test
@@ -59,7 +60,6 @@ public class MoviesServiceTest {
         moviesService.add(movie5);
         moviesService.add(movie6);
         moviesService.add(movie7);
-
 
 
         String[] actual = moviesService.findLast();
