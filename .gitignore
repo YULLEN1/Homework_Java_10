@@ -37,6 +37,4 @@ build/
 ### Mac OS ###
 .DS_Store
 
-.idea/
-target/
-*iml
+https://github.com/YULLEN1/oop5
